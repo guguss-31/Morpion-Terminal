@@ -101,6 +101,8 @@ def TourJoueurX():
     while gagner == 0: 
         vérifier()
         affichage()  
+        if gagner in ["O", "X"]:
+            break
         print(translations[selected_language]['turn_x'])
         joueurX = int(input())
         if grille[joueurX-1] not in [" X ", " O "]: 
@@ -114,6 +116,8 @@ def TourJoueurO():
     while gagner == 0: 
         vérifier()
         affichage()  
+        if gagner in ["O", "X"]:
+            break
         print(translations[selected_language]['turn_o'])
         joueurO = int(input())
         if grille[joueurO-1] not in [" X ", " O "]: 
